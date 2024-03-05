@@ -1,0 +1,27 @@
+{% load static %}
+
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="">
+    <title>dynatrace test</title>
+</head>
+
+<body>
+    <form action="{% url 'testapp:result' %}" method="post">
+        {% csrf_token %}
+        <label for="selected_car">日付を選んでください:</label>
+        <br>
+        <select id="selected_car" name="selected_car">
+            <option value="Toyota Camry">Toyota Camry</option>
+            <option value="Ford F-150">Ford F-150</option>
+            <option value="Honda Civic">Honda Civic</option>
+            <option value="Volkswagen Golf">Volkswagen Golf</option>
+            <option value="Tesla Model S">Tesla Model S</option>
+        </select>
+        <br>
+        <button type="submit">検索</button>
+    </form>
+</body>

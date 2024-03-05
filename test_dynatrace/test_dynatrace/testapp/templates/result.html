@@ -1,0 +1,41 @@
+{% load static %}
+
+
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="">
+    <title>dynatrace test</title>
+</head>
+
+
+
+<body>
+    <h1>Flight Information</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ディーラー</th>
+                <th>料金</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for car in car_data %}
+                <tr>
+                    <td>{{ car.dealership }}</td>
+                    <td>{{ car.prime }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{% url 'testapp:home' %}">
+      <button type="submit">home</button>
+    </a>
+
+
+</body>
+
+</html>
